@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --a: #8b1a1a;
+  --h1: #c9a84c;
+  --body: #f5f0e8;
+  --p: #2c1810;
+  --main: #c59b27;
+  --card: #faf6f0;
+  --navbar: #2c6ecc;
+}
+
+body {
+  background-color: var(--body);
+  color: var(--p);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+main {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--main);
+}
+
+footer {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--main);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  font-family: "Cinzel", serif;
+  color: var(--h1);
+}
+
+p {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--p);
+}
+
+a {
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--a);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--h1);
+}
+
+img {
+  width: 400px;
+  height: 420px;
+  border-radius: 20px;
+}
+
+/* navbar */
+.navbar {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--main);
+}
+
+.menu {
+  background-color: var(--card);
+  padding: 10px;
+  border-radius: 12px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* cards */
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--card);
+  padding: 10px;
+  border-radius: 12px;
+  margin: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.julio {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  background-color: var(--card);
+  padding: 10px;
+  border-radius: 12px;
+  margin: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.julio:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.julio-img {
+  background-color: var(--main);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.julio-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* botão */
+.btn {
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.btn-default {
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid var(--card);
+  background-color: var(--h1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-default:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link:hover {
+  color: var(--card);
+}
+
+/* rodapé */
+.rodapé {
+  background-color: var(--main);
+  padding: 10px;
+  border-radius: 12px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card-rodapé {
+  background-color: var(--card);
+  padding: 10px;
+  border-radius: 12px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-rodapé:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Responsivo ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .julio {
+    gap: 20px;
+  }
+
+  img {
+    width: 300px;
+    height: 320px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  main,
+  footer {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .navbar {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .julio {
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .card-rodapé {
+    margin: 10px;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  .btn-default {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .menu {
+    padding: 8px;
+  }
+
+  .nav-links {
+    gap: 6px;
+  }
+
+  .julio-img {
+    padding: 10px;
+  }
+
+  .btn-default {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}   
